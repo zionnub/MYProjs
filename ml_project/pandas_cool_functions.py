@@ -17,7 +17,7 @@ gauth = GoogleAuth()
 gauth.credentials = GoogleCredentials.get_application_default()
 drive = GoogleDrive(gauth)
 
-downloaded = drive.CreateFile({'id':"1J9HUDllQESKWuctYXf8Z0NxAw9Unps93"})  
+downloaded = drive.CreateFile({'id':"1J9HUDllQESKWuctYXf8Z0NxAw9Unps93"})
 downloaded.GetContentFile('netflix_titles.csv')
 
 # Commented out IPython magic to ensure Python compatibility.
@@ -51,7 +51,7 @@ nf_test2_df = nf_test2_df.assign(like=True)
 print(len(nf_df.columns))
 nf_test2_df.head()
 
-"""# Use of .apply 
+"""# Use of .apply
  a method to replace for loop in python
 """
 
