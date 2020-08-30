@@ -1,5 +1,7 @@
 from qiskit import IBMQ
+import qiskit
 IBMQ.save_account('4db1f51f9ff428e7c2ed755e17189c47b3ec25d001d9d91e6eca47960a0bb4b06a6ee5c2ff3f5d70411f5fe3691b168d770bb003757ce2fab8901bf745760665')
+
 qiskit.__qiskit_version__
 import numpy as np
 from qiskit import(QuantumCircuit,execute,Aer)
