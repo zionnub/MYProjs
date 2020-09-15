@@ -9,7 +9,7 @@ print(repo.untracked_files)
 # First create a Github instance:
 
 # or using an access token
-g = Github("de3c4703e7d023f20ce1c86bbd2202cfc3fdee56")
+g = Github("")
 
 # Then play with your Github objects:
 for repo in g.get_user().get_repos():
@@ -51,7 +51,7 @@ git.Git(https://github.com/zionnub/MYProjs.git)
 
 import git
 
-g = git.cmd.Git("/Users/sdas/Documents/MYProjs")
+g = git.cmd.Git("/Users/sdas/Documents/catalog-content")
 g.pull()
 
 
@@ -64,19 +64,24 @@ with repo.config_reader() as git_config:
 import os
 import re
 
-path = "/Users/sdas/Documents/MYProjs"
+path = "/Users/sdas/Documents/catalog-content"
+path ="/Users/sdas/Documents/catalog-content/noon/pages/desktop"
 files = os.listdir(path)
 
 for f in files:
 	print(f)
 
 files = os.walk(path)
+y=0
 for root, directories, files in os.walk(path):
     for name in files:
-        x=re.findall("py$",name)
+        x=re.findall("yml$",name)
         if x:
             print(os.path.join(root, name))
-            print("Matched'")
+            # print(name)
+            y=y+1
+             # print("Matched'")
+print(y)
 
 
 for root, directories, files in os.walk(path):
